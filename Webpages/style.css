@@ -7,13 +7,33 @@ font-family: 'Times New Roman', Times, serif;
 /*That is easier to read and will be the main text layout of the website acccording to the proposal*/
 
  body.home-page {
-    background-image: url(imageshefit/strengthclass.png);
-    color: #333; /* This is the dark text that lays over the background image*/
+    background-image: url(imageshefit/purple2.png);
+    background-repeat: none;
+    background-size: cover;
+    color:white; /* This is the light textthat lays over the background image*/
     background-size: cover;
 
  }
 /* The home page background design*/
 
+header {
+   background-color: #d8b4f8;
+   color: #34055e;
+   padding: 20px;
+   text-align: center;
+   border-radius: 10px;
+ }
+ /* Header styling : Decided to go with light purple to bring that soft touch 
+ while incorporating a deep dark purple for contrast */
+
+ header h1{
+   margin-top: 20px;
+   font-size: 40px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+ }
+ /* Heading 1 styling and spacing improved to bring the header to life!*/
+ 
  ul {
     list-style-type: none;
  }
