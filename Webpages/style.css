@@ -1,6 +1,5 @@
 * {
     padding: 0;
-margin: 0;
 box-sizing: border-box;
 font-family: 'Times New Roman', Times, serif;
 }
@@ -27,13 +26,18 @@ header {
  while incorporating a deep dark purple for contrast */
 
  header h1{
-   margin-top: 20px;
+   margin-bottom: 10px;
    font-size: 40px;
    text-transform: uppercase;
    letter-spacing: 2px;
  }
  /* Heading 1 styling and spacing improved to bring the header to life!*/
- 
+
+ header h2{
+   font-size: 16px;
+   margin-top: 20px;
+   letter-spacing: 1px;
+ }
  ul {
     list-style-type: none;
  }
