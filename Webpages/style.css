@@ -9,7 +9,7 @@ font-family: 'Times New Roman', Times, serif;
 
 /* The home page background design*/
  body.home-page {
-    color: black; /* This is the light textthat lays over the background image*/
+    color: black; /* This is the dark textthat lays over the background image*/
     background-size: cover;
  }
 
@@ -38,12 +38,14 @@ header {
    letter-spacing: 1px;
  }
 
- /*Changing the Menu title*/
+ /*Menu title heading(Menu) */
  .menu-home {
   font-size: 35px;
   margin-bottom: 5px;
+  text-align: center;
  }
-  /*Navigation Styling being done in this section*/
+
+  /*Navigation bar Styling being done in this section*/
  nav ul {
     list-style-type: none;
     font-size: 25px;
@@ -52,7 +54,6 @@ header {
     justify-content: center;
     padding: 10px 0px;
     flex-wrap: wrap;
-    text-decoration: none;
  }
 
 nav ul li {
@@ -71,11 +72,7 @@ nav ul li:hover {
   background-color: hsl(264, 20%, 95%);
   border-radius: 15px 5px;
 }
-/* Main content styling */
-.title2 {
-text-align: center;
-font-size: 30px;
-}
+/* Main content styling area */
 main {
   padding: 20px;
   background-color: #ffffff;
@@ -83,30 +80,10 @@ main {
   margin: 20px 0;
   box-shadow: 0 2px 8px rgba(91, 42, 134, 0.15);
 }
-
-/* Links */
-a {
-  color: #5b2a86;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-  background-color: #5b2a86;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-}
-
-footer img {
-  margin: 0 5px;
-  vertical-align: middle;
+/*Titles and paragraphs*/
+.title2 {
+text-align: center;
+font-size: 30px;
 }
 
 main h2 {
@@ -147,4 +124,34 @@ main h2 {
     font-size: 0.95em;
     color: #333;
   }
-  
+
+  /* Links */
+a {
+  color: #5b2a86;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #5b2a86;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 100%;
+}
+
+footer img {
+  margin: 0 5px;
+  vertical-align: middle;
+}
+  .page-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
