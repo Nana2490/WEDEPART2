@@ -5,6 +5,7 @@
     margin-bottom: 10px;
 box-sizing: border-box;
 font-family: 'Times New Roman', Times, serif;
+font-size: 25px;
 }
 
 /* The home page background design*/
@@ -101,29 +102,30 @@ main h2 {
     margin-top: 10px;
     box-shadow: 0 2px 6px rgba(48, 47, 47, 0.1);
   }
-  .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-  }
-  
-  .grid-item {
-    text-align: center;
-    max-width: 220px;
-  }
-  
-  .grid-item img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .grid-item p {
-    margin-top: 10px;
-    font-size: 0.95em;
-    color: #333;
-  }
+  /* Image grid with increased gap */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px; /*This is the increased gap */
+  justify-content: center;
+}
+
+.grid-item {
+  text-align: center;
+  max-width: 220px;
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.grid-item img:hover {
+  transform: scale(1.1); /* Scale the image to 110% on hover */
+  z-index: 1; /* Bring the hovered image to the front */
+}
 
   /* Links */
 a {
@@ -136,6 +138,18 @@ a:hover {
 }
 
 /* Footer styling */
+
+html, body{
+  height: 100%; /* make sure it takes the full height */
+}
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* allows the main content to take up available space*/
+}
 footer {
   background-color: #5b2a86;
   color: white;
