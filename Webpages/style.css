@@ -1,20 +1,20 @@
+/*That is easier to read and will be the main text layout of the website acccording to the proposal*/
 * {
     padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
 box-sizing: border-box;
 font-family: 'Times New Roman', Times, serif;
 }
-/*That is easier to read and will be the main text layout of the website acccording to the proposal*/
 
- body.home-page {
-    background-image: url(imageshefit/purple2.png);
-    background-repeat: none;
-    background-size: cover;
-    color:white; /* This is the light textthat lays over the background image*/
-    background-size: cover;
-
- }
 /* The home page background design*/
+ body.home-page {
+    color: black; /* This is the light textthat lays over the background image*/
+    background-size: cover;
+ }
 
+  /* Header styling : Decided to go with light purple to bring that soft touch 
+ while incorporating a deep dark purple for contrast */
 header {
    background-color: #d8b4f8;
    color: #34055e;
@@ -22,22 +22,129 @@ header {
    text-align: center;
    border-radius: 10px;
  }
- /* Header styling : Decided to go with light purple to bring that soft touch 
- while incorporating a deep dark purple for contrast */
 
+  /* Heading 1 styling and spacing improved to bring the header to life!*/
  header h1{
    margin-bottom: 10px;
-   font-size: 40px;
+   font-size: 60px;
    text-transform: uppercase;
    letter-spacing: 2px;
  }
- /* Heading 1 styling and spacing improved to bring the header to life!*/
 
+  /* Heading 2 styling*/
  header h2{
-   font-size: 16px;
+   font-size: 30px;
    margin-top: 20px;
    letter-spacing: 1px;
  }
- ul {
-    list-style-type: none;
+
+ /*Changing the Menu title*/
+ .menu-home {
+  font-size: 35px;
+  margin-bottom: 5px;
  }
+  /*Navigation Styling being done in this section*/
+ nav ul {
+    list-style-type: none;
+    font-size: 25px;
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    padding: 10px 0px;
+    flex-wrap: wrap;
+    text-decoration: none;
+ }
+
+nav ul li {
+  margin-top: 5px;
+  padding: 5px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a {
+  color: #5b2a86;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li:hover {
+  background-color: hsl(264, 20%, 95%);
+  border-radius: 15px 5px;
+}
+/* Main content styling */
+.title2 {
+text-align: center;
+font-size: 30px;
+}
+main {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(91, 42, 134, 0.15);
+}
+
+/* Links */
+a {
+  color: #5b2a86;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #5b2a86;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+footer img {
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+main h2 {
+  color: #5b2a86;
+    margin-bottom: 15px;
+  }
+
+  main p {
+    margin: 15px 0;
+  }
+  
+  /* Images */
+  main img {
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 6px rgba(48, 47, 47, 0.1);
+  }
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+  
+  .grid-item {
+    text-align: center;
+    max-width: 220px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid-item p {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #333;
+  }
+  
