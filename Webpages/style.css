@@ -137,6 +137,241 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Juice bar styling */
+.juicebar {
+  max-width: 220px;
+  margin: 0 auto 50px auto;
+  border: 2px solid #d8b4f8;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 15px 25px;
+  box-shadow: 0 2px 8px rgba(91, 42, 134, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.juicebar img {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 15px 0 10px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.juicebar img:hover {
+  transform: scale(1.1);
+}
+
+/* Fun Features Section */
+.fun-features {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* Progress bars container */
+.progress-container {
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 2px solid #d8b4f8;
+  box-shadow: 0 2px 8px rgba(91, 42, 134, 0.15);
+}
+
+.progress-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.progress-bar {
+  background-color: #e5d8f7;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+  background: linear-gradient(45deg, #7a44f5, #c98fff);
+  height: 28px;
+  width: 0;
+  border-radius: 15px;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 28px;
+  font-weight: bold;
+  transition: width 2s ease;
+}
+
+.progress-fill.strength { width: 90%; }
+.progress-fill.endurance { width: 75%; }
+.progress-fill.flexibility { width: 60%; }
+
+/* Stats boxes */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(91,42,134,0.15);
+  padding: 15px;
+  gap: 20px;
+}
+
+.stat-box {
+  flex: 1;
+  text-align: center;
+  padding: 15px 10px;
+  background: linear-gradient(135deg, #7a44f5, #c98fff);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0 0 12px rgba(190, 133, 255, 0.7);
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(190, 133, 255, 1);
+  cursor: default;
+}
+
+/* Motivational quote */
+.quote-section {
+  background: linear-gradient(90deg, #b993d6, #8ca6db);
+  color: white;
+  font-style: italic;
+  padding: 30px 40px;
+  margin: 50px auto;
+  max-width: 800px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 20px rgba(140, 166, 219, 0.7);
+  user-select: none;
+}
+
+/* Fitness tips cards */
+.tips-container {
+  text-align: center;
+  gap: 25px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.tip-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(120, 80, 200, 0.15);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 15px;
+}
+
+.tip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(120, 80, 200, 0.4);
+}
+
+.tip-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 3px solid #9c72e6;
+}
+
+.tip-card h4 {
+  margin: 15px 15px 10px;
+  color: #5b2a86;
+  font-size: 1.3rem;
+}
+
+.tip-card p {
+  margin: 0 15px;
+  font-size: 1rem;
+  color: #333;
+}
+/* Style the details element as a dropdown container */
+.dropdown {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Times New Roman', Times, serif;
+  color: #34055e;
+}
+
+/* Style the summary as a button */
+.dropdown-summary {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #d8b4f8;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  list-style: none; /* Remove default disclosure arrow (will add custom) */
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover effect on summary */
+.dropdown-summary:hover {
+  background-color: #b88ee0;
+}
+
+/* Remove default triangle and add custom arrow */
+.dropdown-summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-summary::before {
+  content: "►";
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] > .dropdown-summary::before {
+  transform: rotate(90deg);
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+  background-color: #f0e5e5;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(91, 42, 134, 0.15);
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .dropdown-summary {
+    font-size: 18px;
+    padding: 10px 18px;
+  }
+  .dropdown-content {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
 /* Footer styling */
 
 html, body{
@@ -148,16 +383,21 @@ html, body{
   flex-direction: column;
 }
 main {
-  flex: 1; /* allows the main content to take up available space*/
+min-height: 100vh; /* allows the main content to take up available space*/
+margin-bottom: -100px;
 }
+
 footer {
+
   background-color: #5b2a86;
   color: white;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  margin-top: 30px;
-  height: 100%;
+}
+
+.push-footer {
+  height: 100px;
 }
 
 footer img {
