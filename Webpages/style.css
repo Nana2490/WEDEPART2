@@ -1,89 +1,34 @@
 /*That is easier to read and will be the main text layout of the website acccording to the proposal*/
 * {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 box-sizing: border-box;
 font-family: 'Times New Roman', Times, serif;
-font-size: 25px;
+font-size: 35px;
 }
 
-/* The home page background design*/
- body.home-page {
-    color: black;
-  }
-
-/* Enhanced Home Page Header Styling for a more visually exciting look */
+/* Enhanced Home Page Header Styling*/
 body.home-page header {
   position: relative;
-  padding: 60px 30px 80px;
+  padding: 30px 30px 80px;
   overflow: hidden;
   border-radius: 12px;
-  color: #fafafa;
   text-align: center;
-  font-weight: 700;
   background: linear-gradient(270deg, #7a44f5, #c98fff, #7a44f5);
   background-size: 600% 600%;
-  animation: gradientShift 18s ease infinite;
+  animation: gradientShift 25s ease infinite; /* Controls the speed of the gradient on the header*/
   box-shadow: 0 12px 30px rgba(122, 68, 245, 0.6);
 }
 
-/* Animated moving background gradient */
+/* Animated Moving Background Gradient */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Glowing, layered translucent circles for depth */
-body.home-page header::before,
-body.home-page header::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 0;
-}
-
-body.home-page header::before {
-  width: 280px;
-  height: 280px;
-  background: rgba(255, 255, 255, 0.15);
-  top: 20px;
-  left: 10%;
-  animation: floatPulse 7s ease-in-out infinite;
-}
-
-body.home-page header::after {
-  width: 220px;
-  height: 220px;
-  background: rgba(200, 143, 255, 0.2);
-  bottom: 10px;
-  right: 15%;
-  animation: floatPulse 10s ease-in-out infinite alternate;
-}
-
-@keyframes floatPulse {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
-  50% { transform: translateY(-18px) scale(1.1); opacity: 0.25; }
-}
-
-/* Header main title */
-body.home-page header h1 {
-  font-size: 64px;
-  margin: 0 0 16px;
-  letter-spacing: 3px;
-  text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.7),
-    0 4px 10px rgba(122, 68, 245, 0.9);
-  position: relative;
-  z-index: 1;
-  color: #fafafa;
-}
-
-/* Logo styling with subtle glow and hover animation */
+/* Logo Styling With Subtle Glow & Hover Animation on Home-Page*/
 body.home-page header img {
   display: inline-block;
   margin-bottom: 20px;
@@ -94,25 +39,13 @@ body.home-page header img {
   position: relative;
   z-index: 1;
 }
+/* Animation On The Logo Is Activated*/
 body.home-page header img:hover {
   transform: scale(1.15) rotate(10deg);
   box-shadow: 0 0 30px rgba(200, 143, 255, 1);
 }
 
-/* Menu heading styling */
-body.home-page .menu-home {
-  font-size: 38px;
-  margin-top: 30px;
-  margin-bottom: 25px;
-  letter-spacing: 1.8px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0 10px rgba(122, 68, 245, 0.6);
-  position: relative;
-  z-index: 1;
-}
-
-/* Navigation style */
+/* Navigation Style  For The Header At The Beginning Of The Page*/
 body.home-page nav ul {
   list-style: none;
   padding: 0;
@@ -121,53 +54,25 @@ body.home-page nav ul {
   justify-content: center;
   gap: 40px;
   font-weight: 700;
-  font-size: 22px;
   position: relative;
   z-index: 1;
   flex-wrap: wrap;
 }
 
-body.home-page nav ul li {
-  position: relative;
-  padding: 6px 20px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  color: #e6d9ff;
-}
-
+/*This Adds The Colour and Removes Links Underline*/
 body.home-page nav ul li a {
-  color: #e6d9ff;
+  color: #10022a;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
   position: relative;
   z-index: 1;
 }
 
 body.home-page nav ul li:hover {
-  background: linear-gradient(45deg, #9c7dff, #7a44f5);
+  background: linear-gradient(270deg, #9c7dff, #e2e0e5);
   box-shadow: 0 6px 15px rgba(138, 71, 255, 0.7);
-}
-
-body.home-page nav ul li:hover a {
-  color: #ffffff;
-}
-
-/* Animated underline effect on nav links */
-body.home-page nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #c98fff;
-  transition: width 0.3s ease;
-  border-radius: 2px;
-}
-
-body.home-page nav ul li a:hover::after {
-  width: 100%;
+  border-radius: 20%;
+  padding: 2%;
 }
 
 /* Responsive adjustments */
@@ -179,13 +84,12 @@ body.home-page nav ul li a:hover::after {
     font-size: 44px;
   }
   body.home-page .menu-home {
-    font-size: 28px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
   body.home-page nav ul {
     gap: 25px;
-    font-size: 18px;
+    font-size: 25px;
   }
 }
 
@@ -194,8 +98,6 @@ body header {
   position: relative;
   padding: 40px 20px 60px; /* Slightly less padding than the homepage */
   overflow: hidden;
-  border-radius: 12px;
-  color: #fafafa;
   text-align: center;
   font-weight: 700;
   background: linear-gradient(270deg, #7a44f5, #c98fff);
@@ -204,7 +106,7 @@ body header {
 
 /* Header main title for all pages */
 body header h1 {
-  font-size: 48px; /* Slightly smaller than homepage */
+  font-size: 49px; /* Slightly smaller than homepage */
   margin: 0 0 16px;
   letter-spacing: 2px;
   text-shadow:
@@ -226,50 +128,28 @@ body header img {
   z-index: 1;
 }
 
+/* Activating The Animation*/
 body header img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(200, 143, 255, 0.8);
 }
 
-/* Menu heading styling for all pages */
-body .menu-home {
-  font-size: 30px; /* Slightly smaller than homepage */
-  margin-top: 20px;
-  margin-bottom: 15px;
-  letter-spacing: 1.5px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0 8px rgba(122, 68, 245, 0.5);
-  position: relative;
-  z-index: 1;
-}
-
 /* Navigation style for all pages */
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 30px 30px 80px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 30px;
-  font-weight: 700;
-  font-size: 20px;
   position: relative;
   z-index: 1;
   flex-wrap: wrap;
-}
-
-nav ul li {
-  position: relative;
-  padding: 5px 15px; /* Slightly less padding than homepage */
-  border-radius: 20px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  color: #e6d9ff;
+  border-radius: 12px;
 }
 
 nav ul li a {
-  color: #e6d9ff;
+  color: #120a21;
   text-decoration: none;
   transition: color 0.3s ease;
   position: relative;
@@ -277,29 +157,8 @@ nav ul li a {
 }
 
 nav ul li:hover {
-  background: linear-gradient(45deg, #9c7dff, #7a44f5);
+  background: linear-gradient(270deg, #e1dbf7, #7a44f5);
   box-shadow: 0 4px 10px rgba(138, 71, 255, 0.5);
-}
-
-nav ul li:hover a {
-  color: #ffffff;
-}
-
-/* Animated underline effect on nav links for all pages */
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #c98fff;
-  transition: width 0.3s ease;
-  border-radius: 2px;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
 }
 
 /* Responsive adjustments for general header */
@@ -334,7 +193,7 @@ font-size: 30px;
 .welcome-text {
   font-size: 3rem;
   font-weight: 700;
-  white-space: pre-line; /* preserve spaces */
+  white-space: pre-line; /* preserves spaces */
   user-select: none;
   animation: popUpMove 0.8s ease-out forwards;
   opacity: 0;
@@ -367,9 +226,9 @@ font-size: 30px;
       padding: 0 10px;
       white-space: normal;
   }
-
-  /* main styling  improved*/
 }
+
+/* main styling  improved*/
 main h2 {
   color: #9a51d9;
     margin-bottom: 6px;
@@ -439,7 +298,6 @@ main h2 {
 .juicebar-text {
   text-align: center;
   color: white;
-
 }
 
 /* Fun Features Section */
@@ -480,7 +338,7 @@ main h2 {
   height: 28px;
   width: 0;
   border-radius: 15px;
-  color: white;
+  color:rgb(67, 61, 61);
   text-align: right;
   padding-right: 10px;
   line-height: 28px;
@@ -492,11 +350,11 @@ main h2 {
 .progress-fill.endurance { width: 75%; }
 .progress-fill.flexibility { width: 60%; }
 
-/* Stats boxes */
+/* Stats Boxes */
 .stats-container {
   display: flex;
   justify-content: space-around;
-  background-color: white;
+  background-color: #f1eaf7;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(91,42,134,0.15);
   padding: 15px;
@@ -511,7 +369,7 @@ main h2 {
   color: white;
   border-radius: 10px;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   box-shadow: 0 0 12px rgba(190, 133, 255, 0.7);
   user-select: none;
   transition: transform 0.3s ease;
@@ -559,7 +417,7 @@ main h2 {
 }
 
 .tip-card {
-  background-color: white;
+  background-color:#f1eaf7;
   border-radius: 15px;
   box-shadow: 0 3px 15px rgba(120, 80, 200, 0.15);
   overflow: hidden;
@@ -591,69 +449,10 @@ main h2 {
   font-size: 1rem;
   color: #333;
 }
-/* Style the details element as a dropdown container */
-.dropdown {
-  max-width: 600px;
-  margin: 20px auto;
-  font-family: 'Times New Roman', Times, serif;
-  color: #34055e;
-}
-
-/* Style the summary as a button */
-.dropdown-summary {
-  font-size: 22px;
-  font-weight: bold;
-  background-color: #d8b4f8;
-  padding: 12px 24px;
-  border-radius: 10px;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  list-style: none; /* Remove default disclosure arrow (will add custom) */
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Hover effect on summary */
-.dropdown-summary:hover {
-  background-color: #b88ee0;
-}
-
-/* Remove default triangle and add custom arrow */
-.dropdown-summary::-webkit-details-marker {
-  display: none;
-}
-
-.dropdown-summary::before {
-  content: "►";
-  display: inline-block;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-
-/* Rotate arrow when open */
-details[open] > .dropdown-summary::before {
-  transform: rotate(90deg);
-}
-
-/* Dropdown content styling */
-.dropdown-content {
-  background-color: #f0e5e5;
-  padding: 15px;
-  margin-top: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(91, 42, 134, 0.15);
-  text-align: left;
-  font-size: 18px;
-  line-height: 1.6;
-}
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .dropdown-summary {
-    font-size: 18px;
     padding: 10px 18px;
   }
   .dropdown-content {
@@ -662,26 +461,7 @@ details[open] > .dropdown-summary::before {
   }
 }
 
-/* Style for trainer names */
-ul li strong {
-  color: #9533eb; /* Change this to your desired color */
-}
-
-/* Footer styling */
-
-html, body{
-  height: 100%; /* make sure it takes the full height */
-}
-.page-wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main {
-min-height: 100vh; /* allows the main content to take up available space*/
-margin-bottom: -100px;
-}
-
+/* Footer updated styling*/
 footer {
 
   background-color: #5b2a86;
@@ -691,6 +471,14 @@ footer {
   border-radius: 10px;
 }
 
+html, body{
+  height: 100%; /* makes sure it takes the full height */
+}
+
+main {
+min-height: 100vh; /* allows the main content to take up available space*/
+margin-bottom: -100px;
+}
 .push-footer {
   height: 100px;
 }
