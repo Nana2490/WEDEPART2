@@ -10,9 +10,8 @@ font-size: 25px;
 
 /* The home page background design*/
  body.home-page {
-    color: black; /* This is the dark textthat lays over the background image*/
-    background-size: cover;
- }
+    color: black;
+  }
 
   /* Header styling : Decided to go with light purple to bring that soft touch 
  while incorporating a deep dark purple for contrast */
@@ -80,6 +79,10 @@ main {
   border-radius: 10px;
   margin: 20px 0;
   box-shadow: 0 2px 8px rgba(91, 42, 134, 0.15);
+  background-image: url('imageshefit/womaninpurpleandblackbackground.png');
+background-repeat: no-repeat;
+background-size: cover;
+color: #f0e5e5;
 }
 /*Titles and paragraphs*/
 .title2 {
@@ -163,12 +166,16 @@ a:hover {
   transform: scale(1.1);
 }
 
+.juicebar-text {
+  text-align: center;
+
+}
+
 /* Fun Features Section */
 .fun-features {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 50px;
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px;
 }
@@ -263,6 +270,7 @@ a:hover {
 /* Fitness tips cards */
 .tips-container {
   text-align: center;
+  display: grid;
   gap: 25px;
   margin-bottom: 50px;
   max-width: 1000px;
