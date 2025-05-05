@@ -13,65 +13,305 @@ font-size: 25px;
     color: black;
   }
 
-  /* Header styling : Decided to go with light purple to bring that soft touch 
- while incorporating a deep dark purple for contrast */
-header {
-   background-color: #d8b4f8;
-   color: #34055e;
-   padding: 20px;
-   text-align: center;
-   border-radius: 10px;
- }
-
-  /* Heading 1 styling and spacing improved to bring the header to life!*/
- header h1{
-   margin-bottom: 10px;
-   font-size: 60px;
-   text-transform: uppercase;
-   letter-spacing: 2px;
- }
-
-  /* Heading 2 styling*/
- header h2{
-   font-size: 30px;
-   margin-top: 20px;
-   letter-spacing: 1px;
- }
-
- /*Menu title heading(Menu) */
- .menu-home {
-  font-size: 35px;
-  margin-bottom: 5px;
+/* Enhanced Home Page Header Styling for a more visually exciting look */
+body.home-page header {
+  position: relative;
+  padding: 60px 30px 80px;
+  overflow: hidden;
+  border-radius: 12px;
+  color: #fafafa;
   text-align: center;
- }
+  font-weight: 700;
+  background: linear-gradient(270deg, #7a44f5, #c98fff, #7a44f5);
+  background-size: 600% 600%;
+  animation: gradientShift 18s ease infinite;
+  box-shadow: 0 12px 30px rgba(122, 68, 245, 0.6);
+}
 
-  /*Navigation bar Styling being done in this section*/
- nav ul {
-    list-style-type: none;
-    font-size: 25px;
-    display: flex;
-    gap: 45px;
-    justify-content: center;
-    padding: 10px 0px;
-    flex-wrap: wrap;
- }
+/* Animated moving background gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glowing, layered translucent circles for depth */
+body.home-page header::before,
+body.home-page header::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.home-page header::before {
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.15);
+  top: 20px;
+  left: 10%;
+  animation: floatPulse 7s ease-in-out infinite;
+}
+
+body.home-page header::after {
+  width: 220px;
+  height: 220px;
+  background: rgba(200, 143, 255, 0.2);
+  bottom: 10px;
+  right: 15%;
+  animation: floatPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-18px) scale(1.1); opacity: 0.25; }
+}
+
+/* Header main title */
+body.home-page header h1 {
+  font-size: 64px;
+  margin: 0 0 16px;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.7),
+    0 4px 10px rgba(122, 68, 245, 0.9);
+  position: relative;
+  z-index: 1;
+  color: #fafafa;
+}
+
+/* Logo styling with subtle glow and hover animation */
+body.home-page header img {
+  display: inline-block;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 20px rgba(122, 68, 245, 0.7);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+body.home-page header img:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 0 30px rgba(200, 143, 255, 1);
+}
+
+/* Menu heading styling */
+body.home-page .menu-home {
+  font-size: 38px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px rgba(122, 68, 245, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation style */
+body.home-page nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-weight: 700;
+  font-size: 22px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+body.home-page nav ul li {
+  position: relative;
+  padding: 6px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #e6d9ff;
+}
+
+body.home-page nav ul li a {
+  color: #e6d9ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+body.home-page nav ul li:hover {
+  background: linear-gradient(45deg, #9c7dff, #7a44f5);
+  box-shadow: 0 6px 15px rgba(138, 71, 255, 0.7);
+}
+
+body.home-page nav ul li:hover a {
+  color: #ffffff;
+}
+
+/* Animated underline effect on nav links */
+body.home-page nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #c98fff;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+body.home-page nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body.home-page header {
+    padding: 40px 20px 60px;
+  }
+  body.home-page header h1 {
+    font-size: 44px;
+  }
+  body.home-page .menu-home {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body.home-page nav ul {
+    gap: 25px;
+    font-size: 18px;
+  }
+}
+
+/* General Header Styling for All Pages */
+body header {
+  position: relative;
+  padding: 40px 20px 60px; /* Slightly less padding than the homepage */
+  overflow: hidden;
+  border-radius: 12px;
+  color: #fafafa;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(270deg, #7a44f5, #c98fff);
+  box-shadow: 0 8px 20px rgba(122, 68, 245, 0.4);
+}
+
+/* Header main title for all pages */
+body header h1 {
+  font-size: 48px; /* Slightly smaller than homepage */
+  margin: 0 0 16px;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.5),
+    0 2px 6px rgba(122, 68, 245, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo styling for all pages */
+body header img {
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(122, 68, 245, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+body header img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(200, 143, 255, 0.8);
+}
+
+/* Menu heading styling for all pages */
+body .menu-home {
+  font-size: 30px; /* Slightly smaller than homepage */
+  margin-top: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 8px rgba(122, 68, 245, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation style for all pages */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
 
 nav ul li {
-  margin-top: 5px;
-  padding: 5px 15px;
-  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 5px 15px; /* Slightly less padding than homepage */
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #e6d9ff;
 }
 
 nav ul li a {
-  color: #5b2a86;
+  color: #e6d9ff;
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 nav ul li:hover {
-  background-color: hsl(264, 20%, 95%);
-  border-radius: 15px 5px;
+  background: linear-gradient(45deg, #9c7dff, #7a44f5);
+  box-shadow: 0 4px 10px rgba(138, 71, 255, 0.5);
 }
+
+nav ul li:hover a {
+  color: #ffffff;
+}
+
+/* Animated underline effect on nav links for all pages */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #c98fff;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive adjustments for general header */
+@media (max-width: 768px) {
+  body header {
+    padding: 30px 15px 50px;
+  }
+  body header h1 {
+    font-size: 36px;
+  }
+}
+
 /* Main content styling area */
 main {
   padding: 20px;
@@ -90,9 +330,49 @@ text-align: center;
 font-size: 30px;
 }
 
+/* Pop-up animation for welcome text */
+.welcome-text {
+  font-size: 3rem;
+  font-weight: 700;
+  white-space: pre-line; /* preserve spaces */
+  user-select: none;
+  animation: popUpMove 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  color: #3b0967; /* Example color, adjust as needed */
+  text-align: center;
+  margin: 15px auto;
+}
+
+/* Keyframes for pop-up movement */
+@keyframes popUpMove {
+  0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+  }
+  60% {
+      opacity: 1;
+      transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
+
+/* This is the responsive scaling for smaller screens */
+@media (max-width: 600px) {
+  .welcome-text {
+      font-size: 2rem;
+      padding: 0 10px;
+      white-space: normal;
+  }
+
+  /* main styling  improved*/
+}
 main h2 {
-  color: #5b2a86;
-    margin-bottom: 15px;
+  color: #9a51d9;
+    margin-bottom: 6px;
   }
 
   main p {
@@ -130,16 +410,6 @@ main h2 {
   z-index: 1; /* Bring the hovered image to the front */
 }
 
-  /* Links */
-a {
-  color: #5b2a86;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 /* Juice bar styling */
 .juicebar {
   max-width: 220px;
@@ -168,6 +438,7 @@ a:hover {
 
 .juicebar-text {
   text-align: center;
+  color: white;
 
 }
 
@@ -244,6 +515,16 @@ a:hover {
   box-shadow: 0 0 12px rgba(190, 133, 255, 0.7);
   user-select: none;
   transition: transform 0.3s ease;
+}
+
+/* Remove underline from links inside .stat-box */
+.stat-box a {
+  text-decoration: none; /* Removes the underline */
+  color: white; /* This part ensures the link color matches the text color */
+}
+
+.stat-box a:hover {
+  text-decoration: underline;
 }
 
 .stat-box:hover {
@@ -380,6 +661,12 @@ details[open] > .dropdown-summary::before {
     padding: 15px;
   }
 }
+
+/* Style for trainer names */
+ul li strong {
+  color: #9533eb; /* Change this to your desired color */
+}
+
 /* Footer styling */
 
 html, body{
